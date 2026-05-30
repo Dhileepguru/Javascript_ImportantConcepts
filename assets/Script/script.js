@@ -11,3 +11,18 @@ function displayContent()
     btn.remove();
     }
 };
+
+
+//Destructuring Concepts
+// It is used to split the values of arrays and objects to variables
+//two types
+// array destruct
+// object destruct
+
+
+//array destruct
+
+let arr=[1,2,3,4,5];
+
+const [x,y,z,...restVal]=arr;
+console.log(x,y,z,restVal);
