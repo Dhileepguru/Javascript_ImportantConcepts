@@ -115,13 +115,41 @@ let count=0;
 let fullArr=dummyArr.flat(2);
 fullArr.forEach(n=>
 {
-    console.log(n);
+    // console.log(n);
     count++;
 }
 )
 console.log("");
 
 console.log(count);
+
+//Map
+
+console.log(fullArr);
+let MappedArr=fullArr.map(n=>n*2);
+
+console.log(MappedArr);
+
+//Filter
+
+let AjaxArr=[
+    {name:'dhileep',age:22},
+    {name:'guru',age:17},
+    {name:'manoj',age:49},
+]
+
+console.log(AjaxArr.filter(n=>n.age===22)
+);
+
+let jsonArr={
+    name:'dhileep',
+    age:22,
+    color:'red'
+};
+
+console.log(jsonArr.filter());
+
+
 
 
 
