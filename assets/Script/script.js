@@ -96,6 +96,32 @@ console.log(combinedVal);
 
 console.log(combinedVal.lastIndexOf('dhileep'));
 
+//flat 
+//nested array to normal array
+
+let dummyArr=[1,2,3,4,[5,6],7,9];
+
+console.log(dummyArr.flat());
+
+dummyArr.push([10,11]);
+
+console.log(dummyArr);
+
+console.log(dummyArr.flat(2));
+
+
+//foreach
+let count=0;
+let fullArr=dummyArr.flat(2);
+fullArr.forEach(n=>
+{
+    console.log(n);
+    count++;
+}
+)
+console.log("");
+
+console.log(count);
 
 
 
