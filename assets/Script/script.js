@@ -1,153 +1,180 @@
-let conBox=document.getElementsByClassName("con");
+// let conBox=document.getElementsByClassName("con");
 
-let btn=document.getElementById("btn");
-function displayContent()
-{
-    for(let i=0;i<conBox.length;i++)
-    {
-    let tag=document.createElement('p');
-    tag.innerHTML="Destructing of array";
-    conBox[i].appendChild(tag);
-    btn.remove();
-    }
-};
-
-
-//Destructuring Concepts
-// It is used to split the values of arrays and objects to variables
-//two types
-// array destruct
-// object destruct
+// let btn=document.getElementById("btn");
+// function displayContent()
+// {
+//     for(let i=0;i<conBox.length;i++)
+//     {
+//     let tag=document.createElement('p');
+//     tag.innerHTML="Destructing of array";
+//     conBox[i].appendChild(tag);
+//     btn.remove();
+//     }
+// };
 
 
-//array destruct
+// //Destructuring Concepts
+// // It is used to split the values of arrays and objects to variables
+// //two types
+// // array destruct
+// // object destruct
 
-let arr=[1,2,3,4,5];
 
-const [x,y,z,...restVal]=arr;
-console.log(x,y,z,restVal);
+// //array destruct
 
-//object destruct
+// let arr=[1,2,3,4,5];
 
-let objVal= {
-    firstName:'dhileep',
-    lastName:'D',
-    Age:22,
-    mob:1234567890
-}
+// const [x,y,z,...restVal]=arr;
+// console.log(x,y,z,restVal);
 
-const {firstName,lastName,Age: VoteAge,...restVal2}=objVal;
+// //object destruct
 
-console.log(firstName,lastName,VoteAge,restVal2);
+// let objVal= {
+//     firstName:'dhileep',
+//     lastName:'D',
+//     Age:22,
+//     mob:1234567890
+// }
 
-//Practice Destruct
+// const {firstName,lastName,Age: VoteAge,...restVal2}=objVal;
 
-let arrVal=[45,32,4,3,67];
+// console.log(firstName,lastName,VoteAge,restVal2);
 
-const [num1,num2,num3,num4,...restval3]=arrVal;
+// //Practice Destruct
 
-let con2=document.getElementsByClassName("con2")[0];
+// let arrVal=[45,32,4,3,67];
 
-let Ptag=document.createElement("p");
-Ptag.innerHTML=num1+num2+num3+num4+restval3;
-con2.appendChild(Ptag);
+// const [num1,num2,num3,num4,...restval3]=arrVal;
 
-//Array Methods 
+// let con2=document.getElementsByClassName("con2")[0];
+
+// let Ptag=document.createElement("p");
+// Ptag.innerHTML=num1+num2+num3+num4+restval3;
+// con2.appendChild(Ptag);
+
+// //Array Methods 
  
-//tostring()
+// //tostring()
 
-let fruits =['apple','orange','mango']
+// let fruits =['apple','orange','mango']
 
-console.log(fruits);
-let ToStringVal=fruits.toString();
-console.log(ToStringVal);
+// console.log(fruits);
+// let ToStringVal=fruits.toString();
+// console.log(ToStringVal);
 
-//Join()
-console.log(fruits.join(' and ')  );
+// //Join()
+// console.log(fruits.join(' and ')  );
 
-//Concat()
+// //Concat()
 
-let names=['guru','saran'];
-let names2=['Manoj'];
+// let names=['guru','saran'];
+// let names2=['Manoj'];
 
-let combinedVal=names.concat(names2);
-console.log(combinedVal);
+// let combinedVal=names.concat(names2);
+// console.log(combinedVal);
 
-//splice
-// remove a values and add a value 
-combinedVal.splice(1,2,'dhileep','saritha');
-console.log(combinedVal);
-
-
-//slice
-// same like splice but here the original values will not be changed
-let sliceTest=combinedVal.slice(1,2);
-console.log(sliceTest);
+// //splice
+// // remove a values and add a value 
+// combinedVal.splice(1,2,'dhileep','saritha');
+// console.log(combinedVal);
 
 
-//indexOf()
-
-console.log(combinedVal.indexOf('dhileep'));
-
-combinedVal.push('dhileep');
-console.log(combinedVal);
-
-//lastIndexof
-
-console.log(combinedVal.lastIndexOf('dhileep'));
-
-//flat 
-//nested array to normal array
-
-let dummyArr=[1,2,3,4,[5,6],7,9];
-
-console.log(dummyArr.flat());
-
-dummyArr.push([10,11]);
-
-console.log(dummyArr);
-
-console.log(dummyArr.flat(2));
+// //slice
+// // same like splice but here the original values will not be changed
+// let sliceTest=combinedVal.slice(1,2);
+// console.log(sliceTest);
 
 
-//foreach
-let count=0;
-let fullArr=dummyArr.flat(2);
-fullArr.forEach(n=>
+// //indexOf()
+
+// console.log(combinedVal.indexOf('dhileep'));
+
+// combinedVal.push('dhileep');
+// console.log(combinedVal);
+
+// //lastIndexof
+
+// console.log(combinedVal.lastIndexOf('dhileep'));
+
+// //flat 
+// //nested array to normal array
+
+// let dummyArr=[1,2,3,4,[5,6],7,9];
+
+// console.log(dummyArr.flat());
+
+// dummyArr.push([10,11]);
+
+// console.log(dummyArr);
+
+// console.log(dummyArr.flat(2));
+
+
+// //foreach
+// let count=0;
+// let fullArr=dummyArr.flat(2);
+// fullArr.forEach(n=>
+// {
+//     // console.log(n);
+//     count++;
+// }
+// )
+// console.log("");
+
+// console.log(count);
+
+// //Map
+
+// console.log(fullArr);
+// let MappedArr=fullArr.map(n=>n*2);
+
+// console.log(MappedArr);
+
+// //Filter
+
+// let AjaxArr=[
+//     {name:'dhileep',age:22},
+//     {name:'guru',age:17},
+//     {name:'manoj',age:49},
+// ]
+
+// console.log(AjaxArr.filter(n=>n.age===22)
+// );
+
+// let jsonArr={
+//     name:'dhileep',
+//     age:22,
+//     color:'red'
+// };
+
+// console.log(jsonArr.filter());
+
+//Promises
+//async await finally
+ 
+async function PromiseTest()
 {
-    // console.log(n);
-    count++;
-}
-)
-console.log("");
+  try{
+    let response= await fetch('https://jsonplaceholder.typicode.com/users');
+    var responseJson=await response.json();
+    // responseJson.forEach(data=>{
+    //     console.log(responseJson);
+    // })
+   console.log(responseJson[0].email);
+   
+    
+    
+    
 
-console.log(count);
-
-//Map
-
-console.log(fullArr);
-let MappedArr=fullArr.map(n=>n*2);
-
-console.log(MappedArr);
-
-//Filter
-
-let AjaxArr=[
-    {name:'dhileep',age:22},
-    {name:'guru',age:17},
-    {name:'manoj',age:49},
-]
-
-console.log(AjaxArr.filter(n=>n.age===22)
-);
-
-let jsonArr={
-    name:'dhileep',
-    age:22,
-    color:'red'
+  }
+  catch(error)
+  {
+    console.log(error);
+  }
 };
 
-console.log(jsonArr.filter());
+PromiseTest();
+
 
 
 
