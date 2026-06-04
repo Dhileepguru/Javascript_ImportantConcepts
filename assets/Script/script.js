@@ -162,10 +162,6 @@ async function PromiseTest()
     // })
    console.log(responseJson[0].email);
    
-    
-    
-    
-
   }
   catch(error)
   {
@@ -175,7 +171,31 @@ async function PromiseTest()
 
 PromiseTest();
 
+//DOM 
+// Element Selectors
 
+let ConT=document.getElementsByClassName("con");
+
+// ConT.style.backGroundColor="red";
+var count=0;
+let CollToArr=Array.from(ConT)
+CollToArr.forEach(n=>
+{
+  
+  if(count%2==0)
+  {
+  n.style.backgroundColor="red";
+  n.style.color="white";
+  }
+  else
+  {
+   n.style.backgroundColor="yellow";
+  n.style.color="black"; 
+  }
+  
+  count++;
+}
+)
 
 
 
