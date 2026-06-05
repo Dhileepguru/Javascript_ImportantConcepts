@@ -165,24 +165,24 @@ console.log("");
 //Promises
 //async await finally
  
-async function PromiseTest()
-{
-  try{
-    let response= await fetch('https://jsonplaceholder.typicode.com/users');
-    var responseJson=await response.json();
-    // responseJson.forEach(data=>{
-    //     console.log(responseJson);
-    // })
-   console.log(responseJson[0].email);
+// async function PromiseTest()
+// {
+//   try{
+//     let response= await fetch('https://jsonplaceholder.typicode.com/users');
+//     var responseJson=await response.json();
+//     // responseJson.forEach(data=>{
+//     //     console.log(responseJson);
+//     // })
+//    console.log(responseJson[0].name);
    
-  }
-  catch(error)
-  {
-    console.log(error);
-  }
-};
+//   }
+//   catch(error)
+//   {
+//     console.log(error);
+//   }
+// };
 
-PromiseTest();
+// PromiseTest();
 
 //DOM 
 // Element Selectors
@@ -221,13 +221,55 @@ container3.forEach(n=>{
   n.style.backgroundColor="yellow";
 })
 
-// let 
-
 // console.log("con: ", conToArr[0]);
 
+//Functions
 
+// factorial using recursion 
+//recursion 
+// function calling itself is called recursion
 
+function factor(n)
+{
+  if(n==1)
+  {
+    return 1;
+  }
+  else
+  {
+    return n*factor(n-1);
+  }
+}
+console.log(factor(5));
 
+//anononyms function
+// 
+let greet= async function(user)
+{
+  await console.log("Welcome",user);
+}
+
+// console.log(greet("dhileep"));
+// var conApi;
+async function arrowF()
+{
+  try
+  {
+    var testApi=await fetch('https://jsonplaceholder.typicode.com/users');
+    var conApi=await testApi.json();
+    // console.log(conApi);
+    conApi.forEach(n=>{
+      greet(n.name);
+    })
+    
+  }
+  catch(e)
+  {
+    console.log(e);
+  }
+}
+
+arrowF();
 
 
 
