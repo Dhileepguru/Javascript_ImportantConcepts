@@ -1,3 +1,16 @@
+
+// variables
+var a=100;
+console.log(a);
+var a=200;// var can overwrite
+console.log(a);
+
+let b=500;
+console.log(b);
+// let b=200; // let can't overwrite
+
+console.log("");
+
 // let conBox=document.getElementsByClassName("con");
 
 // let btn=document.getElementById("btn");
@@ -211,7 +224,6 @@ container3.forEach(n=>{
 // let 
 
 // console.log("con: ", conToArr[0]);
-
 
 
 
