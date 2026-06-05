@@ -269,7 +269,46 @@ async function arrowF()
   }
 }
 
-arrowF();
+// arrowF();
+
+//Arrow Function
+
+//sum of array
+
+let sumArray=[1,2,3,4,5,6,7,8,9];
+
+let sum=()=>
+{
+  let total=0;
+  sumArray.forEach(n=>{
+    total+=n;
+  })
+  return total;
+}
+
+async function patient() {
+  console.log("Sum of Array : ",await sum());
+  // return sum();
+}
+// patient();
 
 
+//nullish coalescing 
+// ??
 
+let objValue=
+{
+  name:"dhileep",
+  age:[1,2,3,4,5],
+  address:
+  {
+    homeAddress:null,
+    officeAddress:undefined
+  }
+};
+
+let check=objValue.address.officeAddress?? "Handled null";
+let check2=objValue?.address?.officeAddress;
+
+console.log(check);
+console.log(check2);
