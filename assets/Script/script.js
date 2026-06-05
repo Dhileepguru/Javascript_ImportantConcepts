@@ -174,28 +174,45 @@ PromiseTest();
 //DOM 
 // Element Selectors
 
-let ConT=document.getElementsByClassName("con");
+// let ConT=document.getElementsByClassName("con");
 
 // ConT.style.backGroundColor="red";
-var count=0;
-let CollToArr=Array.from(ConT)
-CollToArr.forEach(n=>
-{
+// var count=0;
+// let CollToArr=Array.from(ConT)
+// CollToArr.forEach(n=>
+// {
   
-  if(count%2==0)
-  {
-  n.style.backgroundColor="red";
-  n.style.color="white";
-  }
-  else
-  {
-   n.style.backgroundColor="yellow";
-  n.style.color="black"; 
-  }
+//   if(count%2==0)
+//   {
+//   n.style.backgroundColor="red";
+//   n.style.color="white";
+//   }
+//   else
+//   {
+//    n.style.backgroundColor="yellow";
+//   n.style.color="black"; 
+//   }
   
-  count++;
-}
-)
+//   count++;
+// }
+// )
+
+//Query selector
+
+let container2=document.querySelector(".con");
+let container3=document.querySelectorAll(".con");// nodelist
+
+// let conToArr=Array.from(container);
+container2.style.color="red";
+container3.forEach(n=>{
+  n.style.backgroundColor="yellow";
+})
+
+// let 
+
+// console.log("con: ", conToArr[0]);
+
+
 
 
 
