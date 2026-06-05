@@ -1,15 +1,15 @@
 
 // variables
-var a=100;
-console.log(a);
-var a=200;// var can overwrite
-console.log(a);
+// var a=100;
+// console.log(a);
+// var a=200;// var can overwrite
+// console.log(a);
 
-let b=500;
-console.log(b);
-// let b=200; // let can't overwrite
+// let b=500;
+// console.log(b);
+// // let b=200; // let can't overwrite
 
-console.log("");
+// console.log("");
 
 // let conBox=document.getElementsByClassName("con");
 
@@ -212,14 +212,14 @@ console.log("");
 
 //Query selector
 
-let container2=document.querySelector(".con");
-let container3=document.querySelectorAll(".con");// nodelist
+// let container2=document.querySelector(".con");
+// let container3=document.querySelectorAll(".con");// nodelist
 
-// let conToArr=Array.from(container);
-container2.style.color="red";
-container3.forEach(n=>{
-  n.style.backgroundColor="yellow";
-})
+// // let conToArr=Array.from(container);
+// container2.style.color="red";
+// container3.forEach(n=>{
+//   n.style.backgroundColor="yellow";
+// })
 
 // console.log("con: ", conToArr[0]);
 
@@ -229,67 +229,67 @@ container3.forEach(n=>{
 //recursion 
 // function calling itself is called recursion
 
-function factor(n)
-{
-  if(n==1)
-  {
-    return 1;
-  }
-  else
-  {
-    return n*factor(n-1);
-  }
-}
-console.log(factor(5));
+// function factor(n)
+// {
+//   if(n==1)
+//   {
+//     return 1;
+//   }
+//   else
+//   {
+//     return n*factor(n-1);
+//   }
+// }
+// console.log(factor(5));
 
-//anononyms function
-// 
-let greet= async function(user)
-{
-  await console.log("Welcome",user);
-}
+// //anononyms function
+// // 
+// let greet= async function(user)
+// {
+//   await console.log("Welcome",user);
+// }
 
-// console.log(greet("dhileep"));
-// var conApi;
-async function arrowF()
-{
-  try
-  {
-    var testApi=await fetch('https://jsonplaceholder.typicode.com/users');
-    var conApi=await testApi.json();
-    // console.log(conApi);
-    conApi.forEach(n=>{
-      greet(n.name);
-    })
+// // console.log(greet("dhileep"));
+// // var conApi;
+// async function arrowF()
+// {
+//   try
+//   {
+//     var testApi=await fetch('https://jsonplaceholder.typicode.com/users');
+//     var conApi=await testApi.json();
+//     // console.log(conApi);
+//     conApi.forEach(n=>{
+//       greet(n.name);
+//     })
     
-  }
-  catch(e)
-  {
-    console.log(e);
-  }
-}
+//   }
+//   catch(e)
+//   {
+//     console.log(e);
+//   }
+// }
 
-// arrowF();
+// // arrowF();
 
-//Arrow Function
+// //Arrow Function
 
-//sum of array
+// //sum of array
 
-let sumArray=[1,2,3,4,5,6,7,8,9];
+// let sumArray=[1,2,3,4,5,6,7,8,9];
 
-let sum=()=>
-{
-  let total=0;
-  sumArray.forEach(n=>{
-    total+=n;
-  })
-  return total;
-}
+// let sum=()=>
+// {
+//   let total=0;
+//   sumArray.forEach(n=>{
+//     total+=n;
+//   })
+//   return total;
+// }
 
-async function patient() {
-  console.log("Sum of Array : ",await sum());
-  // return sum();
-}
+// async function patient() {
+//   console.log("Sum of Array : ",await sum());
+//   // return sum();
+// }
 // patient();
 
 
@@ -312,3 +312,12 @@ let check2=objValue?.address?.officeAddress;
 
 console.log(check);
 console.log(check2);
+
+
+//ternary operator
+
+let ageValue=18;
+
+let checkAge=ageValue>=18? "Eligible":"NotEligible";
+console.log(checkAge);
+
